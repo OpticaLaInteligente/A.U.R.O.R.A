@@ -2,16 +2,16 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://maxicast96.github.io/A.U.R.O.R.A",
+  "homepage": "https://opticalainteligente.github.io/A.U.R.O.R.A/",
   "description": "A.U.R.O.R.A - Aplicación de gestión óptica",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "predeploy": "npm --prefix frontend run build",
+    "deploy": "npm --prefix frontend run deploy",
+    "lint": "npm --prefix frontend run lint",
+    "preview": "npm --prefix frontend run preview"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
