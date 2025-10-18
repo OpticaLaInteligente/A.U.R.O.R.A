@@ -3,7 +3,7 @@
 
 export async function sendEmail({ to, subject, html, text, from }) {
   // TODO: Reemplaza con tu API Key habilitada en Brevo (Transactional)
-  const apiKey = "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";
+  const apiKey = process.env.BREVO_API_KEY;
   if (!apiKey) {
     throw new Error('Missing BREVO_API_KEY');
   }
@@ -22,8 +22,8 @@ export async function sendEmail({ to, subject, html, text, from }) {
   // Forzar remitente verificado en Brevo (ignorar "from" de entrada)
   // TODO: Reemplaza con tu remitente VERIFICADO en Brevo (o dominio autenticado SPF/DKIM)
   const sender = {
-    name: 'Óptica La Inteligente',
-    email: 'opticalainteligente@gmail.com',
+    name: process.env.BREVO_SENDER_NAME || 'Óptica La Inteligente',
+    email: process.env.BREVO_SENDER_EMAIL || 'opticalainteligente@gmail.com',
   };
 
   const payload = {
