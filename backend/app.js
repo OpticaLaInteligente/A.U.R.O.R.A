@@ -8,15 +8,25 @@ dotenv.config();
 // Inicializar aplicación Express y middlewares
 const app = express();
 app.use(cookieParser());
-app.use(cors({
+
+// CORS settings
+const corsOptions = {
   origin: [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
     'https://aurora-production-6d8b.up.railway.app',
+    'https://maxicast96.github.io',
     'https://opticalainteligente.github.io'
   ],
-  credentials: true
-}));
+  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
+  credentials: true,
+  optionsSuccessStatus: 204
+};
+
+// Preflight and main CORS
+app.options('*', cors(corsOptions));
+app.use(cors(corsOptions));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
