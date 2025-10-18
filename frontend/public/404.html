@@ -3,10 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Redirecting…</title>
-    <meta http-equiv="refresh" content="0; url=/A.U.R.O.R.A/">
-    <link rel="canonical" href="/A.U.R.O.R.A/">
+    <meta name="robots" content="noindex">
   </head>
   <body>
-    <p>Redirecting to <a href="/A.U.R.O.R.A/">/A.U.R.O.R.A/</a>…</p>
+    <script>
+      // SPA redirect for GitHub Pages (rafgraph/spa-github-pages pattern)
+      (function() {
+        var l = window.location;
+        var repoBase = '/A.U.R.O.R.A';
+        // Only run if we're under the project base path
+        if (!l.pathname.startsWith(repoBase)) {
+          // Not our project path, nothing to do
+          return;
+        }
+        var fullPath = l.pathname.substring(repoBase.length) + l.search + l.hash;
+        // Build redirect URL to index with encoded path in query
+        var redirect = repoBase + '/?p=' + encodeURIComponent(fullPath.replace(/^\/+/,'/'));
+        // Replace to avoid extra history entry
+        l.replace(redirect);
+      })();
+    </script>
+    <noscript>
+      <p>Redirecting… If you are not redirected, go to <a href="/A.U.R.O.R.A/">/A.U.R.O.R.A/</a></p>
+    </noscript>
   </body>
 </html>

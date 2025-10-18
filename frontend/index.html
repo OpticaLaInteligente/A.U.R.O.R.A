@@ -13,6 +13,20 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Restore path redirected by 404.html on GitHub Pages
+      (function(){
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var p = params.get('p');
+          if (p) {
+            var repoBase = '/A.U.R.O.R.A';
+            var newUrl = repoBase + p.replace(/^\/+/,'/');
+            window.history.replaceState(null, '', newUrl);
+          }
+        } catch (_) {}
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
     <script>
       // Replace blocked file:// image sources with a public placeholder
