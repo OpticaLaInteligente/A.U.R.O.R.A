@@ -86,7 +86,7 @@ const axiosWithFallback = async (method, path, data, config = {}) => {
 
   const primary = API_CONFIG.BASE_URL;
   const secondary = primary.includes('localhost')
-    ? 'https://aurora-production-7e57.up.railway.app/api'
+    ? 'https://aurora-production-6d8b.up.railway.app/api'
     : 'http://localhost:4000/api';
 
   try {

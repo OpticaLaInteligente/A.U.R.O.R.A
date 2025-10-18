@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 
 // --- CONFIGURACIÓN ---
-const API_URL = 'https://aurora-production-7e57.up.railway.app/api';
+const API_URL = 'https://aurora-production-6d8b.up.railway.app/api';
 
 // Estados iniciales de filtros
 const INITIAL_FILTERS = {

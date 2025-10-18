@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import axios from 'axios';
+import { API_CONFIG } from '../../../config/api';
 import { useForm } from '../../../hooks/admin/useForm';
 import { usePagination } from '../../../hooks/admin/usePagination';
 
@@ -19,7 +20,7 @@ import {
 } from 'lucide-react';
 
 // --- CONFIGURACIÓN ---
-const API_URL = 'https://aurora-production-7e57.up.railway.app/api/clientes';
+const API_URL = `${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.CLIENTES}`;
 const ITEMS_PER_PAGE = 10;
 
 // Estados iniciales

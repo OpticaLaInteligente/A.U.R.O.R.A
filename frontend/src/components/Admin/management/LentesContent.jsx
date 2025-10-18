@@ -88,7 +88,7 @@ const TABLE_COLUMNS = [
 
 // Helpers de API
 const getBase = () => API_CONFIG.BASE_URL;
-const PROD_FALLBACK = 'https://aurora-production-7e57.up.railway.app/api';
+const PROD_FALLBACK = 'https://aurora-production-6d8b.up.railway.app/api';
 const withBase = (path, base = getBase()) => `${base}${path}`;
 
 // --- COMPONENTE SKELETON LOADER ---

@@ -5,7 +5,7 @@ import DetailModal from '../ui/DetailModal';
 import Alert from '../ui/Alert';
 import ConfirmationModal from '../ui/ConfirmationModal';
 
-const API_URL = 'https://aurora-production-7e57.up.railway.app/api';
+const API_URL = 'https://aurora-production-6d8b.up.railway.app/api';
 
 const initialFormState = {
   clienteId: '',

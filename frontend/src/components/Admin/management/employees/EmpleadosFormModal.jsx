@@ -4,7 +4,7 @@ import { Camera, Upload, X, User, Edit3, Eye, EyeOff, Lock, Unlock, Check, Alert
 import { EL_SALVADOR_DATA } from '../../constants/ElSalvadorData';
 
 // URL base de tu API
-const API_URL = 'https://aurora-production-7e57.up.railway.app/api/empleados';
+const API_URL = 'https://aurora-production-6d8b.up.railway.app/api/empleados';
 
 // Componente de subida de foto profesional
 const PhotoUploadComponent = ({ currentPhoto, onPhotoChange, employeeName = '' }) => {

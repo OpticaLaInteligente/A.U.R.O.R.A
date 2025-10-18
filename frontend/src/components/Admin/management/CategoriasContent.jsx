@@ -604,8 +604,8 @@ const CategoriasContent = () => {
     // Intentar primero con la BASE_URL activa
     const primaryBase = API_CONFIG.BASE_URL;
     const secondaryBase = primaryBase.includes('localhost')
-      ? 'https://aurora-production-7e57.up.railway.app/api'
-      : 'https://aurora-production-7e57.up.railway.app/api/api';
+      ? 'https://aurora-production-6d8b.up.railway.app/api'
+      : 'https://aurora-production-6d8b.up.railway.app/api/api';
 
     try {
       return await tryOnce(primaryBase);

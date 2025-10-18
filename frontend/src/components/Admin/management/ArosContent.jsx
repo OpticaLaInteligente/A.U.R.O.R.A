@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import axios from 'axios';
+import { API_CONFIG } from '../../../config/api';
 import { useForm } from '../../../hooks/admin/useForm';
 import { usePagination } from '../../../hooks/admin/usePagination';
 import PageHeader from '../ui/PageHeader';
@@ -15,11 +16,12 @@ import {
   Filter, X, ChevronDown, SortAsc, SortDesc, CheckCircle, Palette, Layers
 } from 'lucide-react';
 
-const API_URL = 'https://aurora-production-7e57.up.railway.app/api/aros';
-const MARCAS_URL = 'https://aurora-production-7e57.up.railway.app/api/marcas';
-const CATEGORIAS_URL = 'https://aurora-production-7e57.up.railway.app/api/categoria';
-const SUCURSALES_URL = 'https://aurora-production-7e57.up.railway.app/api/sucursales';
-const PROMOCIONES_URL = 'https://aurora-production-7e57.up.railway.app/api/promociones';
+const BASE = API_CONFIG.BASE_URL;
+const API_URL = `${BASE}${API_CONFIG.ENDPOINTS.AROS || '/aros'}`;
+const MARCAS_URL = `${BASE}${API_CONFIG.ENDPOINTS.MARCAS}`;
+const CATEGORIAS_URL = `${BASE}${API_CONFIG.ENDPOINTS.CATEGORIAS}`;
+const SUCURSALES_URL = `${BASE}${API_CONFIG.ENDPOINTS.SUCURSALES}`;
+const PROMOCIONES_URL = `${BASE}${API_CONFIG.ENDPOINTS.PROMOCIONES}`;
 
 const ITEMS_PER_PAGE = 12;
 

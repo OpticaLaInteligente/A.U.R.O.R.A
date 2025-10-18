@@ -1,4 +1,6 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import { API_CONFIG } from '../../../config/api';
+
 import { usePagination } from '../../../hooks/admin/usePagination';
 import DetailModal from '../ui/DetailModal';
 import Alert from '../ui/Alert';
@@ -14,7 +16,8 @@ import {
 } from 'lucide-react';
 
 // --- CONFIGURACIÓN ---
-const API_URL = 'https://aurora-production-7e57.up.railway.app/api/sucursales';
+const API_URL = `${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.SUCURSALES}`;
+
 const ITEMS_PER_PAGE = 10;
 
 // Estados iniciales
