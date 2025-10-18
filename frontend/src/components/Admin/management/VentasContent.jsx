@@ -14,7 +14,7 @@ import Alert from '../ui/Alert';
 import { API_CONFIG, buildApiUrl } from '../../../config/api';
 
 // --- CONFIGURACIÓN ---
-const API_URL = 'https://aurora-production-7e57.up.railway.app/api/ventas';
+const API_URL = 'https://aurora-production-6d8b.up.railway.app/api/ventas';
 const ITEMS_PER_PAGE = 10;
 
 // Estados iniciales

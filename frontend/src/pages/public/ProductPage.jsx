@@ -11,7 +11,7 @@ const ProductPage = ({ productId = '64f7b2c8a1b2c3d4e5f6g7h8' }) => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`https://aurora-production-7e57.up.railway.app/api/lentes/${productId}`);
+        const response = await fetch(`https://aurora-production-6d8b.up.railway.app/api/lentes/${productId}`);
         if (!response.ok) throw new Error('Producto no encontrado');
         const data = await response.json();
         setProduct(data);
