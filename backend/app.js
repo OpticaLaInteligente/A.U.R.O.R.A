@@ -12,8 +12,8 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
-    'https://aurora-production-7e57.up.railway.app',
-    'https://maxicast96.github.io'
+    'https://aurora-production-6d8b.up.railway.app',
+    'https://opticalainteligente.github.io'
   ],
   credentials: true
 }));
